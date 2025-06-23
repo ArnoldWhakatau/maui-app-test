@@ -16,10 +16,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 8.0.x
     - name: Install .NET MAUI
       run : dotnet workload install maui
     - name: Restore dependencies
       run: dotnet restore TestApp/TestApp/TestApp.csproj
     - name: Build
-      run: dotnet build TestApp/TestApp/TestApp.csproj -c Release -f net9.0-ios --no-restore
+      run: dotnet build TestApp/TestApp/TestApp.csproj -c Release -f net8.0-ios --no-restore
